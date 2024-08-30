@@ -1,0 +1,10 @@
+<div class="objects">
+  @for (row of rows; track $index) {
+  <div class="objects__item" [class.selected]="selectedRows.has(row)" (click)="onRowClick(row, $event, $index)"
+    (dblclick)="onRowDblClick(row)">
+    {{ row.name }}
+  </div>
+  }
+</div>
+
+<button (click)="showSelected()">Mostrar selecionados</button>
